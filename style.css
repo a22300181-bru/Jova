@@ -8,7 +8,7 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto; /* permite scroll vertical */
+    overflow-y: auto;
 }
 
 .container {
@@ -51,12 +51,12 @@ button:hover {
     font-size: 1.2rem;
     line-height: 1.8;
     text-align: left;
-    max-height: 60vh; /* para scroll interno si es muy largo */
+    max-height: 60vh;
     overflow-y: auto;
 }
 
 .lyrics p {
-    opacity: 0; /* para animación */
+    opacity: 0;
     margin: 5px 0;
 }
 
