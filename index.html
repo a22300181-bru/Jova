@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Jova Mi Boo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">💖 Para Jova Mi Boo 💖</h1>
+        <!-- Reproductor de Spotify -->
+        <div class="spotify-player">
+            <iframe src="https://open.spotify.com/embed/track/2UZoSuDO0D6y9bW9Z3Hkng?utm_source=generator" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <!-- Botón para mostrar la letra -->
+        <button id="showLyricsBtn">Mostrar Letra</button>
+        <!-- Letra de la canción -->
+        <div id="lyrics" class="lyrics hidden">
+            <p>Tienes la fragancia de las flores del jardín</p>
+            <p>Todas las mañanas brilla el sol gracias a ti</p>
+            <p>Hay tanta ternura dentro de tu corazón</p>
+            <p>Mas fue tu inocencia lo que a mí me cautivó</p>
+            <p>Y cada día va creciendo más mi amor</p>
+            <p>Y es por ti que la tristeza para siempre se marchó</p>
+            <p>Doy gracias al destino</p>
+            <p>Que te puso en mi camino</p>
+            <p>Niña de mi corazón</p>
+            <p>Eres tan dulce como el agua de los ríos</p>
+            <p>Hoy gracias a tu sonrisa mi vida tiene sentido</p>
+            <p>Mi amor, quiero decirte</p>
+            <p>Que desde que apareciste</p>
+            <p>Despertaste mi ilusión</p>
+            <p>Niña de mi corazón</p>
+        </div>
+        <!-- Corazones flotando -->
+        <div class="hearts"></div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('showLyricsBtn');
+        const lyrics = document.getElementById('lyrics');
+
+        btn.addEventListener('click', () => {
+            lyrics.classList.toggle('hidden');
+            lyrics.classList.add('fadeIn');
+        });
+    </script>
+</body>
+</html>
