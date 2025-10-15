@@ -5,9 +5,9 @@ body {
     background: linear-gradient(to bottom, #ffcccc, #ff6666);
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .container {
@@ -17,6 +17,8 @@ body {
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(255, 0, 100, 0.5);
     position: relative;
+    max-width: 600px;
+    margin: 20px;
 }
 
 .title {
@@ -34,6 +36,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s, background-color 0.3s;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -47,7 +50,11 @@ button:hover {
     font-size: 1.2rem;
     line-height: 1.8;
     text-align: left;
-    animation: fadeIn 2s forwards;
+}
+
+.lyrics p {
+    opacity: 0; /* para animación */
+    margin: 5px 0;
 }
 
 .hidden {
@@ -58,11 +65,6 @@ button:hover {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Corazones flotando */
@@ -90,4 +92,10 @@ button:hover {
     0% { transform: translateY(100%); opacity: 0; }
     20% { opacity: 1; }
     100% { transform: translateY(-200%) rotate(360deg); opacity: 0; }
+}
+
+/* Spotify player responsive */
+.spotify-player iframe {
+    border-radius: 10px;
+    margin-top: 20px;
 }
