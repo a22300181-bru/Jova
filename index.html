@@ -50,13 +50,19 @@
             lyrics.classList.remove('hidden');
             lines.forEach(line => line.style.opacity = 0); // inicializa oculto
 
+            // tiempos estimados para que coincida con la parte romántica
+            const timings = [
+                0, 2000, 4000, 6000, 8500,
+                10500, 12500, 14500, 16500,
+                18500, 20500, 22500, 24500, 26500, 28500
+            ];
+
             lines.forEach((line, index) => {
                 setTimeout(() => {
                     line.style.transition = "opacity 1s";
                     line.style.opacity = 1;
-                    // hace scroll automático para ver la línea actual
                     line.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, index * 2000); // cada línea aparece cada 2s
+                }, timings[index]);
             });
         });
     </script>
