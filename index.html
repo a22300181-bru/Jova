@@ -9,12 +9,15 @@
 <body>
     <div class="container">
         <h1 class="title">💖 Para Jova Mi Boo 💖</h1>
+        
         <!-- Reproductor de Spotify -->
         <div class="spotify-player">
             <iframe src="https://open.spotify.com/embed/track/2UZoSuDO0D6y9bW9Z3Hkng?utm_source=generator" width="100%" height="80" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
+
         <!-- Botón para mostrar la letra -->
         <button id="showLyricsBtn">Mostrar Letra</button>
+
         <!-- Letra de la canción -->
         <div id="lyrics" class="lyrics hidden">
             <p>Tienes la fragancia de las flores del jardín</p>
@@ -33,6 +36,7 @@
             <p>Despertaste mi ilusión</p>
             <p>Niña de mi corazón</p>
         </div>
+
         <!-- Corazones flotando -->
         <div class="hearts"></div>
     </div>
@@ -40,12 +44,19 @@
     <script>
         const btn = document.getElementById('showLyricsBtn');
         const lyrics = document.getElementById('lyrics');
+        const lines = lyrics.querySelectorAll('p');
 
         btn.addEventListener('click', () => {
-            lyrics.classList.toggle('hidden');
-            lyrics.classList.add('fadeIn');
+            lyrics.classList.remove('hidden');
+            lines.forEach(line => line.style.opacity = 0); // inicializa oculto
+
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.style.transition = "opacity 1s";
+                    line.style.opacity = 1;
+                }, index * 700); // cada línea aparece 0.7s después
+            });
         });
     </script>
 </body>
 </html>
-
