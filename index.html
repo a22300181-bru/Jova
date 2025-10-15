@@ -16,7 +16,7 @@
         </div>
 
         <!-- Botón para mostrar la letra -->
-        <button id="showLyricsBtn">Mostrar Letra</button>
+        <button id="showLyricsBtn">Cartita pala ti</button>
 
         <!-- Letra de la canción -->
         <div id="lyrics" class="lyrics hidden">
@@ -50,11 +50,23 @@
             lyrics.classList.remove('hidden');
             lines.forEach(line => line.style.opacity = 0); // inicializa oculto
 
-            // tiempos estimados para que coincida con la parte romántica
+            // tiempos afinados en milisegundos para la parte romántica
             const timings = [
-                0, 2000, 4000, 6000, 8500,
-                10500, 12500, 14500, 16500,
-                18500, 20500, 22500, 24500, 26500, 28500
+                0,      // Tienes la fragancia...
+                2200,   // Todas las mañanas...
+                4300,   // Hay tanta ternura...
+                6500,   // Mas fue tu inocencia...
+                8700,   // Y cada día va creciendo...
+                11000,  // Y es por ti...
+                13000,  // Doy gracias al destino
+                15000,  // Que te puso en mi camino
+                17000,  // Niña de mi corazón
+                19000,  // Eres tan dulce como...
+                21000,  // Hoy gracias a tu sonrisa...
+                23000,  // Mi amor, quiero decirte
+                24500,  // Que desde que apareciste
+                26000,  // Despertaste mi ilusión
+                27500   // Niña de mi corazón
             ];
 
             lines.forEach((line, index) => {
