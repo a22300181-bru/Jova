@@ -54,7 +54,9 @@
                 setTimeout(() => {
                     line.style.transition = "opacity 1s";
                     line.style.opacity = 1;
-                }, index * 700); // cada línea aparece 0.7s después
+                    // hace scroll automático para ver la línea actual
+                    line.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, index * 2000); // cada línea aparece cada 2s
             });
         });
     </script>
